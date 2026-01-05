@@ -29,31 +29,19 @@ def main():
     clear_screen()
     config = get_config()
     
-    # URL to fetch global config from Vercel
-    SERVER_URL = "https://aigentermux.vercel.app/get_config"
-    
-    try:
-        # Try to fetch from remote server first
-        resp = requests.get(SERVER_URL, timeout=5)
-        if resp.status_code == 200:
-            server_config = resp.json()
-            api_key = server_config.get("api_key")
-            model = server_config.get("model", "gpt-4o-mini")
-        else:
-            api_key = config.get("api_key")
-            model = config.get("model", "gpt-4o-mini")
-    except:
-        api_key = config.get("api_key")
-        model = config.get("model", "gpt-4o-mini")
+    # This is using Replit's AI Integrations service
+    api_key = os.environ.get("AI_INTEGRATIONS_OPENAI_API_KEY")
+    base_url = os.environ.get("AI_INTEGRATIONS_OPENAI_BASE_URL")
+    model = config.get("model", "gpt-5") # the newest OpenAI model is "gpt-5" which was released August 7, 2025.
     
     if not api_key:
-        console.print(Panel("[bold red]Error: API Key not set and Server unavailable.[/bold red]", title="System Error"))
+        console.print(Panel("[bold red]Error: AI_INTEGRATIONS_OPENAI_API_KEY not set.[/bold red]", title="System Error"))
         sys.exit(1)
     
     console.print(Align.center(Panel(f"[bold green]AIGenTermux v0.1.8[/bold green]\n[cyan]Model: {model}[/cyan]", border_style="bright_blue")))
     console.print("[dim]Type 'exit' to quit, 'clear' to refresh screen.[/dim]\n")
     
-    url = "https://api.openai.com/v1/chat/completions"
+    url = f"{base_url}/chat/completions"
     headers = {
         "Content-Type": "application/json",
         "Authorization": f"Bearer {api_key}"
