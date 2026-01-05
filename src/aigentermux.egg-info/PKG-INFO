@@ -4,6 +4,7 @@ Version: 0.2.1
 Summary: AI Generator for Termux using OpenAI
 Author-email: Author <author@example.com>
 Description-Content-Type: text/markdown
+Requires-Dist: openai>=2.14.0
 Requires-Dist: requests
 Requires-Dist: rich
 

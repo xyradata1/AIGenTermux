@@ -9,6 +9,7 @@ description = "AI Generator for Termux using OpenAI"
 readme = "README.md"
 authors = [{ name = "Author", email = "author@example.com" }]
 dependencies = [
+    "openai>=2.14.0",
     "requests",
     "rich",
 ]
