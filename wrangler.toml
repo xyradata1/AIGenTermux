@@ -1,0 +1,8 @@
+# Wrangler configuration for Cloudflare Pages/Workers
+# This file is used for deploying to Cloudflare dashboard
+
+name = "aigentermux"
+compatibility_date = "2026-01-05"
+
+[site]
+bucket = "./src" # Points to your source code directory
