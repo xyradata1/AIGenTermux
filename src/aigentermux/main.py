@@ -32,7 +32,7 @@ def main():
     # This is using Replit's AI Integrations service
     api_key = os.environ.get("AI_INTEGRATIONS_OPENAI_API_KEY")
     base_url = os.environ.get("AI_INTEGRATIONS_OPENAI_BASE_URL")
-    model = config.get("model", "gpt-5") # the newest OpenAI model is "gpt-5" which was released August 7, 2025.
+    model = config.get("model", "gpt-4o-mini")
     
     if not api_key:
         console.print(Panel("[bold red]Error: AI_INTEGRATIONS_OPENAI_API_KEY not set.[/bold red]", title="System Error"))
