@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aigentermux"
+version = "0.2.1"
+description = "AI Generator for Termux using OpenAI"
+readme = "README.md"
+authors = [{ name = "Author", email = "author@example.com" }]
+dependencies = [
+    "requests",
+    "rich",
+]
+
+[project.scripts]
+aigen = "aigentermux.main:main"
+aigen-admin = "aigentermux.admin:main"

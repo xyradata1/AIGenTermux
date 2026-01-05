@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+src/aigentermux/__init__.py
+src/aigentermux/admin.py
+src/aigentermux/config.py
+src/aigentermux/main.py
+src/aigentermux.egg-info/PKG-INFO
+src/aigentermux.egg-info/SOURCES.txt
+src/aigentermux.egg-info/dependency_links.txt
+src/aigentermux.egg-info/entry_points.txt
+src/aigentermux.egg-info/requires.txt
+src/aigentermux.egg-info/top_level.txt

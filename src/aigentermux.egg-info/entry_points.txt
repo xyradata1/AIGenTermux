@@ -1,0 +1,3 @@
+[console_scripts]
+aigen = aigentermux.main:main
+aigen-admin = aigentermux.admin:main

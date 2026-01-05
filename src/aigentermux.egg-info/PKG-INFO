@@ -1,0 +1,21 @@
+Metadata-Version: 2.4
+Name: aigentermux
+Version: 0.2.1
+Summary: AI Generator for Termux using OpenAI
+Author-email: Author <author@example.com>
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+Requires-Dist: rich
+
+# AIGenTermux
+
+AI Generator for Termux using OpenAI.
+
+## Installation
+```bash
+pip install aigentermux
+```
+
+## Usage
+- `aigen`: Run the AI assistant
+- `aigen-admin`: Configure API keys and settings
